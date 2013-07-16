@@ -11,3 +11,5 @@ class RegistrationForm(Form):
     resume = FileField("Upload your image",
         validators=[])
     accept_tos = BooleanField('I accept the TOS', [validators.Required()])
+
+    allowed_extensions = ['doc','docx','pdf','txt','rtf','odf','ods']
