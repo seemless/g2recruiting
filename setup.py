@@ -11,8 +11,8 @@ setup(
 	author='matt smith',
 	description='Provide an external place for resumes to be uploaded.',
 	#packages=find_packages(),
-	packages=['g2recruiting'],
-	zip_safe=True,
+	#packages=['g2recruiting'],
+	#zip_safe=True,
 	install_requires=[
 	'Flask>=0.6',
     'wtforms',
