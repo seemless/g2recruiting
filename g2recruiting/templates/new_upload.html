@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{%  block body_content %}
+    {{ wtf.quick_form(form,action=action,enctype=enctype) }}
+{% endblock %}
