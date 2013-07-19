@@ -16,6 +16,7 @@ setup(
 	install_requires=[
 	'Flask>=0.6',
     'wtforms',
+    'Flask-Bootstrap'
 	]
 
 
