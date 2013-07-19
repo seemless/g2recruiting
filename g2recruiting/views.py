@@ -16,8 +16,8 @@ def test():
 def login():
     return 'please login'
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_resume():
     form = forms.RegistrationForm(request.form)
 
     if request.method == 'POST' and form.validate():
@@ -29,4 +29,6 @@ def register():
             loc = uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], file_name))
             print loc
         return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+
+    return render_template('new_upload.html', form=form,action='/upload',
+                            enctype='multipart/form-data')
