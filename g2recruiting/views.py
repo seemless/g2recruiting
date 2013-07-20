@@ -18,7 +18,7 @@ def login():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_resume():
-    form = forms.RegistrationForm(request.form)
+    form = forms.UploadForm(request.form)
 
     if request.method == 'POST' and form.validate():
         print (form)
